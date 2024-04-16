@@ -1,7 +1,7 @@
-import React from 'react'
+import { ComponentProps } from "react";
 
-export const Button = () => {
-  return (
-    <button>Button</button>
-  )
-}
+type ButtonProps = ComponentProps<"button">;
+
+export const Button = ({ ...props }: ButtonProps) => {
+  return <button className="bg-blue-500 text-white" {...props} />;
+};
